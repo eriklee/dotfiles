@@ -1,0 +1,8 @@
+#!/usr/bin/python
+import os
+FILE_PATH = "/home/erik/.show_track"
+
+if os.path.exists(FILE_PATH):
+	os.remove(FILE_PATH)
+else:
+	with open(FILE_PATH, 'a'): pass

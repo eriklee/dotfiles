@@ -1,0 +1,7 @@
+recs-fromre -k time 'KiB in (\d.\d\d\d) sec' |\
+recs-xform 'if ($r->{time} > 0.900) {$r->{time} = "outlier"}
+			elsif ($r->{time} > 0.150) {$r->{time} = "fresh connect"}
+			else {$r->{time} = "fast"}' |\
+recs-collate -k time -a count |\
+recs-totable
+

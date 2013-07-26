@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+""" Deletes .pyc files if no matching .py file is found in the directory"""
+import os
+
+for obj in os.walk("./"):
+	(dirpath, _, files) = obj
+	pycs = [f for f in files if ".pyc" in f]
+
+	for pyc in pycs:
+		if pyc[:-1] not in files:
+			file_to_rm = os.path.join(obj[0], pyc)
+			os.remove(file_to_rm)
+			print "Deleted %s" % (file_to_rm,)
