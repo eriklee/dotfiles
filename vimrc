@@ -38,6 +38,8 @@ vmap <Leader>s :SlimuxREPLSendSelection<CR>
 map <Leader>a :SlimuxShellLast<CR>
 " Scratch
 map <Leader><tab> :Sscratch<CR>
+" syntastic
+let g:syntastic_python_checkers=['gamlint']
 
 " Haskell
 let g:haddock_browser = "open"
