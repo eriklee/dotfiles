@@ -82,14 +82,20 @@ alias l='ls -CF'
 #  This doesn't work with a window maximized...
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+# this is to get tmux doing solarized correctly. I think.
+# http://unix.stackexchange.com/questions/66579/how-do-i-get-the-solarized-colour-scheme-working-with-gnome-terminal-tmux-and-v
+alias tmux='TERMINFO=/usr/share/terminfo/x/xterm-16color TERM=xterm-16color tmux -2'
+
+alias todo='vim ~/todo'
+alias notes='vim ~/notes'
+
+# GAMBIT SPECIFIC
 export PYTHONSTARTUP=~/.startup.py
 export PYTHONPATH=$PYTHONPATH:/home/erik/code/gambitpy:/home/erik/code/scrape:/home/erik/code/lineproto:/home/erik/code/dumaclient:/home/erik/code/bacon:/home/erik/code/exchange:
 export PATH=$PATH:/home/erik/.cabal/bin:/home/erik/code/bin:/home/erik/.local/bin/
 export PYTHONWARNINGS=default
 
 alias scrapefox='firefox -new-instance -P scrapers'
-alias todo='vim ~/todo'
-alias notes='vim ~/notes'
 alias sclogs='ssh erik@sclogs'
 alias runscraper='rlwrap python alive.py '
 alias anna='python /home/erik/code/anna/anna.py'
