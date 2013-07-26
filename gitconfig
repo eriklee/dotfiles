@@ -1,0 +1,29 @@
+[user]
+	name = Erik Lee
+	email = erik@gambitresearch.com
+[core]
+	editor = vim
+[help]
+	autocorrect = 1
+[color]
+	ui = true
+[alias]
+	co = checkout
+	st = status
+	ci = commit
+	d = difftool
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset-%C(yellow)%d%Creset%s%Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[merge]
+	tool = scripts/diffconflicts
+[mergetool "diffconflicts"]
+	cmd = diffconflicts vim $BASE $LOCAL $REMOTE $MERGED
+	trustExitCode = true
+	keepBackup = false

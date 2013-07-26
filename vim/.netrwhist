@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/erik/code/duma/ks'
+let g:netrw_dirhist_2='/home/erik/code/scrapers/line'
+let g:netrw_dirhist_3='/home/erik/code/bin'
+let g:netrw_dirhist_4='/home/erik/code/duma/duma'
+let g:netrw_dirhist_5='/home/erik/code/duma'
+let g:netrw_dirhist_6='/home/erik/code/duma/duma'
+let g:netrw_dirhist_7='/home/erik/code/monitor'
+let g:netrw_dirhist_8='/home/erik/code/monitor/mir_stream_watcher'
