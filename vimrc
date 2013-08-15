@@ -28,6 +28,8 @@ set showcmd
 
 set backspace=2
 
+set wildignore=*.o,*.beam,*.pyc,*.hi
+
 " Swap ; and :  Convenient.
 nnoremap ; :
 "nnoremap : ;
