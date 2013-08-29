@@ -8,15 +8,16 @@ servers = (
     password = "DecDeeb9";
   },
   {
-    address = "irc.quakenet.org";
-    chatnet = "QuakeNet";
-    port = "6667";
+    address = "irc.collegiumv.org";
+    chatnet = "cv";
+    port = "8080";
+	autoconnect = "yes";
   }
 );
 
 chatnets = {
   gambit = { type = "IRC"; };
-  QuakeNet = {
+  cv = {
     type = "IRC";
     max_kicks = "1";
     max_msgs = "3";
@@ -27,7 +28,8 @@ chatnets = {
 channels = (
   { name = "#gambit"; chatnet = "gambit"; autojoin = "Yes"; },
   { name = "#gambithumans"; chatnet = "gambit"; autojoin = "Yes"; },
-  { name = "#scrapers"; chatnet = "gambit"; autojoin = "Yes"; }
+  { name = "#scrapers"; chatnet = "gambit"; autojoin = "Yes"; },
+  { name = "#main"; chatnet = "cv"; autojoin = "Yes"; }
 );
 
 aliases = {
